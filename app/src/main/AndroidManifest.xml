@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.booklibrary">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/icon"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.BookLibrary">
+        <activity
+            android:name=".EditBook"
+            android:exported="true"
+            android:label="Edit Book"
+           android:parentActivityName=".book_details" />
+        <activity
+            android:name=".books"
+            android:exported="true"
+            android:label="books"
+            android:parentActivityName=".Categories"/>
+        <activity
+            android:name=".Categories"
+            android:exported="true"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".book_details"
+            android:exported="true"
+            android:label="Book Details"
+            android:parentActivityName=".books"/>
+        <activity
+            android:name=".favourites"
+            android:exported="true"
+            android:label="Favorites"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".add_new_category"
+            android:exported="true"
+            android:label="ADD New Category"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Add_Book"
+            android:exported="true"
+            android:label="Add Book"
+          android:parentActivityName=".MainActivity"  />
+        <activity
+            android:name=".splash_screen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+    </application>
+
+</manifest>

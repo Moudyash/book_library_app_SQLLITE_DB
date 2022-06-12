@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Add_Book"
+    android:orientation="vertical"
+    >
+ <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+
+            />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/bookimg"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:src="@drawable/book"
+app:civ_border_width="2dp"
+
+            />
+
+        <ImageButton
+            android:id="@+id/btn_addimage"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="@drawable/circlebtm"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="45dp"
+            android:src="@drawable/image_icon"
+
+            />
+
+
+    </FrameLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Category"
+            android:textSize="20sp"
+            android:textColor="#8A000000"
+            android:drawableLeft="@drawable/category_icon"
+            android:drawablePadding="3dp"
+            />
+
+        <Spinner android:layout_height="wrap_content" android:layout_width="match_parent"
+            android:id="@+id/spin"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        android:layout_marginTop="5dp"
+
+        >
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:text="ADD TO FAVORITES"
+android:textSize="18sp"
+
+    />
+<Button
+    android:id="@+id/favbtn"
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+   android:layout_marginTop="0dp"
+    android:layout_marginStart="120dp"
+    android:background="@drawable/favorite_icon"
+    />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+android:layout_marginTop="-40dp"        >
+        <com.google.android.material.textfield.TextInputLayout
+android:id="@+id/bookname_til"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Book Name"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:startIconDrawable="@drawable/book_icon"
+            app:helperText=""
+            app:helperTextTextColor="@color/Reed"
+
+            app:endIconMode="clear_text"
+            android:layout_marginTop="10dp"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ed_bookname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:inputType="text"
+                 />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/aurthorname_til"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Author Name"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:startIconDrawable="@drawable/aurthor_icon"
+            app:helperText=""
+            app:helperTextTextColor="@color/Reed"
+
+            app:endIconMode="clear_text"
+            android:layout_marginTop="10dp"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ed_aurthorname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:inputType="text"
+
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/release_til"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Release Year"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:startIconDrawable="@drawable/calendar_icon"
+            app:helperText=""
+            app:helperTextTextColor="@color/Reed"
+
+            app:endIconMode="clear_text"
+            android:layout_marginTop="10dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ed_release"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:inputType="numberSigned"
+
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/pagesnumber_til"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Pages Number"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:startIconDrawable="@drawable/icon_123"
+            app:helperText=""
+            app:helperTextTextColor="@color/Reed"
+
+            app:endIconMode="clear_text"
+            android:layout_marginTop="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ed_pagesnumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:inputType="numberSigned"
+
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+    android:id="@+id/createbookbtn"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="CREATE"
+
+    android:layout_marginTop="40dp"
+    />
+    </LinearLayout>
+</LinearLayout>
+ </ScrollView>
+</LinearLayout>
